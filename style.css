@@ -1,0 +1,161 @@
+:root {
+  --ink: #2a1630;
+  --ink-soft: #5b4560;
+  --paper: #fff6ee;
+  --card: #ffffff;
+  --pink: #ff5fa2;
+  --mint: #3fd6b0;
+  --lemon: #ffd23f;
+  --grape: #7b4dff;
+  --line: #f1dfd3;
+  --radius: 22px;
+  --font: ui-rounded, "SF Pro Rounded", "Nunito", "Varela Round", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #fdeef6;
+    --ink-soft: #cdb6c8;
+    --paper: #1d1020;
+    --card: #2a1830;
+    --line: #3b2541;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a { color: var(--grape); text-underline-offset: 3px; }
+@media (prefers-color-scheme: dark) { a { color: #b9a0ff; } }
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+header.site {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 0;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.logo .dots { display: inline-flex; gap: 4px; }
+.logo .dots i { width: 12px; height: 12px; border-radius: 50%; display: block; }
+.logo .dots i:nth-child(1) { background: var(--pink); }
+.logo .dots i:nth-child(2) { background: var(--lemon); }
+.logo .dots i:nth-child(3) { background: var(--mint); }
+
+nav.site { display: flex; gap: 18px; font-weight: 700; font-size: 15px; }
+nav.site a { color: var(--ink-soft); text-decoration: none; }
+nav.site a:hover, nav.site a[aria-current="page"] { color: var(--ink); }
+
+.hero { padding: 56px 0 40px; }
+.hero h1 {
+  font-size: clamp(44px, 11vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+  margin: 0 0 22px;
+}
+.hero h1 .candy {
+  background: linear-gradient(100deg, var(--pink) 0%, var(--grape) 55%, var(--mint) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero p { font-size: 20px; color: var(--ink-soft); max-width: 34ch; margin: 0; }
+
+.wrappers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 8px 0 56px;
+}
+.wrapper {
+  aspect-ratio: 1;
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(255,255,255,0.28) 0 10px, transparent 10px 26px);
+}
+.wrapper:nth-child(1) { background: var(--pink); }
+.wrapper:nth-child(2) { background: var(--lemon); border-radius: 50%; }
+.wrapper:nth-child(3) { background: var(--mint); }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px;
+  margin: 0 0 18px;
+}
+.card h2 { margin: 0 0 6px; font-size: 22px; letter-spacing: -0.01em; }
+.card p { margin: 0; color: var(--ink-soft); }
+
+main.doc { padding: 24px 0 40px; }
+main.doc h1 { font-size: clamp(34px, 8vw, 52px); letter-spacing: -0.03em; line-height: 1.05; margin: 16px 0 8px; font-weight: 900; }
+main.doc .meta { color: var(--ink-soft); margin: 0 0 32px; }
+main.doc h2 { font-size: 22px; margin: 40px 0 8px; letter-spacing: -0.01em; }
+main.doc h3 { font-size: 18px; margin: 24px 0 6px; }
+main.doc p, main.doc li { color: var(--ink); }
+main.doc ul { padding-left: 22px; }
+main.doc li { margin: 6px 0; }
+
+.callout {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--lemon);
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0 8px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+th { font-weight: 800; }
+.table-scroll { overflow-x: auto; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 26px 0 40px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+footer.site .links { display: flex; gap: 16px; margin-bottom: 8px; font-weight: 700; }
+footer.site .links a { color: var(--ink-soft); }
+
+@media (max-width: 520px) {
+  body { font-size: 16px; }
+  nav.site { gap: 14px; font-size: 14px; }
+  .hero { padding: 36px 0 28px; }
+  .wrappers { gap: 10px; margin-bottom: 40px; }
+}
+
+main.doc .card h2 { margin-top: 0; }
+.nowrap { white-space: nowrap; }
