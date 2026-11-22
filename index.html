@@ -3,45 +3,267 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>BonBon Studios</title>
-  <meta name="description" content="BonBon Studios makes small, sugary mobile games for iPhone and Android.">
+  <title>BonBon Studios · Sweet little games with a mean streak</title>
+  <meta name="description" content="BonBon Studios makes bite-size mobile games: scrub a subway at full speed, climb a 100-floor tower, con a casino boss. Scrub Rush is out now on the App Store.">
+  <meta name="theme-color" content="#E31C1F">
+  <meta property="og:title" content="BonBon Studios">
+  <meta property="og:description" content="Sweet little games with a mean streak. Scrub Rush is out now on the App Store.">
+  <meta property="og:image" content="https://playbonbon.com/img/og.jpg">
+  <meta property="og:url" content="https://playbonbon.com/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/fonts/nunito-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
+  <script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
+<body class="home">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="foil" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="5" height="14" fill="#fff" opacity=".28"/>
+    </pattern>
+    <symbol id="candy" viewBox="0 0 170 90">
+      <g class="ear ear-l"><path d="M44 45 6 14c-6 10-6 52 0 62Z" fill="currentColor"/><path d="M44 45 6 14c-6 10-6 52 0 62Z" fill="url(#foil)"/><path d="M40 45 14 26M40 45 10 45M40 45 14 64" stroke="#000" stroke-opacity=".18" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+      <g class="ear ear-r"><path d="M126 45l38-31c6 10 6 52 0 62Z" fill="currentColor"/><path d="M126 45l38-31c6 10 6 52 0 62Z" fill="url(#foil)"/><path d="M130 45l26-19M130 45h30M130 45l26 19" stroke="#000" stroke-opacity=".18" stroke-width="2.5" fill="none" stroke-linecap="round"/></g>
+      <ellipse cx="85" cy="45" rx="46" ry="34" fill="currentColor"/>
+      <ellipse cx="85" cy="45" rx="46" ry="34" fill="url(#foil)"/>
+      <ellipse cx="72" cy="30" rx="16" ry="7" fill="#fff" opacity=".45" transform="rotate(-18 72 30)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#games">Skip to the games</a>
+
+<header class="site wrap">
+  <a class="logo" href="/"><img src="/img/lollipop.svg" alt="" width="24" height="32">BonBon Studios</a>
+  <nav class="site" aria-label="Main">
+    <a href="#games">Games</a>
+    <a href="#news">News</a>
+    <a href="#how">How we work</a>
+    <a href="/support/">Support</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <h1>Sweet little games with a mean streak.</h1>
+      <p class="lede">We make bite-size games for your phone about scrubbing a subway at full tilt, getting thrown out of a 100-floor tower and conning a casino boss out of his last coin.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="https://apps.apple.com/app/id6829341216">Get Scrub Rush on the App Store</a>
+        <a class="btn btn-ghost" href="#games">See all five games</a>
+      </div>
+    </div>
+    <button class="lolly" type="button" aria-label="Spin the lollipop">
+      <img src="/img/lollipop.svg" alt="" width="240" height="320">
+    </button>
+  </section>
+
+  <section class="box wrap" aria-label="Pick a game">
+    <p class="box-hint">Pick one. They're all free.</p>
+    <ul class="tray">
+      <li><a class="bonbon" href="#scrub-rush" style="--c:#FFC83D" data-game="scrub-rush"><svg viewBox="0 0 170 90" aria-hidden="true"><use href="#candy"/></svg><span>Scrub Rush</span></a></li>
+      <li><a class="bonbon" href="#run-luke-run" style="--c:#2C3E73" data-game="run-luke-run"><svg viewBox="0 0 170 90" aria-hidden="true"><use href="#candy"/></svg><span>Run Luke, Run!</span></a></li>
+      <li><a class="bonbon" href="#gutspin" style="--c:#8E2333" data-game="gutspin"><svg viewBox="0 0 170 90" aria-hidden="true"><use href="#candy"/></svg><span>Gutspin</span></a></li>
+      <li><a class="bonbon" href="#stomp-street" style="--c:#DC6A3C" data-game="stomp-street"><svg viewBox="0 0 170 90" aria-hidden="true"><use href="#candy"/></svg><span>Stomp Street</span></a></li>
+      <li><a class="bonbon" href="#fear-frame" style="--c:#4F9A87" data-game="fear-frame"><svg viewBox="0 0 170 90" aria-hidden="true"><use href="#candy"/></svg><span>Fear Frame</span></a></li>
+    </ul>
+  </section>
+
+  <section id="games" class="games" aria-label="Games">
+
+    <article id="scrub-rush" class="wrapper" style="--c:#FFC83D;--on:#3A1D14">
+      <div class="wrapper-in wrap">
+        <div class="label">
+          <img class="icon" src="/img/games/scrub-icon.webp" alt="" width="72" height="72">
+          <p class="sticker sticker-live">Out now</p>
+          <h2>Scrub Rush</h2>
+          <p class="pitch">You drive a floor scrubber. Through an airport, a subway, a cruise ship and a candy factory, as fast as it goes. Clean everything, flip off the ramps, don't flatten the passengers.</p>
+          <ul class="facts">
+            <li><b>40</b> places in 8 zones</li>
+            <li><b>10</b> machines to drive</li>
+            <li><b>~50</b> awards to earn</li>
+          </ul>
+          <a class="btn btn-ink" href="https://apps.apple.com/app/id6829341216">Free on the App Store</a>
+        </div>
+        <div class="reel reel-wide" tabindex="0" role="group" aria-label="Scrub Rush screenshots">
+          <img src="/img/games/scrub-2.webp" alt="A yellow scrubber boosting down a subway platform with red flames behind it" width="1200" height="554">
+          <img src="/img/games/scrub-1.webp" alt="The scrubber weaving between passengers on a subway platform" width="1200" height="554" loading="lazy">
+          <img src="/img/games/scrub-3.webp" alt="The scrubber sparking along a yellow-striped ramp" width="1200" height="554" loading="lazy">
+          <img src="/img/games/scrub-4.webp" alt="The driver cheering under a checkered finish arch" width="1200" height="554" loading="lazy">
+          <img src="/img/games/scrub-5.webp" alt="The shop, showing paint jobs for the scrubber" width="1200" height="554" loading="lazy">
+          <img src="/img/games/scrub-6.webp" alt="The Scrub Rush title screen with a big Play button" width="1200" height="554" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article id="run-luke-run" class="wrapper" style="--c:#2C3E73;--on:#FFF6EE">
+      <div class="wrapper-in wrap">
+        <div class="label">
+          <img class="icon" src="/img/games/luke-icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="sticker sticker-soon">Coming soon to iPhone</p>
+          <h2>Run Luke, Run!</h2>
+          <p class="pitch">Emily is locked at the top of a 100-floor tower. Luke sneaks, shoots and ducks into cupboards to reach her. Every time a guard catches him, the guard carries him to the window and throws him out.</p>
+          <ul class="facts">
+            <li><b>100</b> floors in 9 zones</li>
+            <li><b>41</b> kinds of guard</li>
+            <li><b>47</b> weapons</li>
+          </ul>
+        </div>
+        <div class="reel reel-wide" tabindex="0" role="group" aria-label="Run Luke, Run! screenshots">
+          <img src="/img/games/luke-1.webp" alt="Luke sneaking past a guard's flashlight on a dark office floor" width="1200" height="552" loading="lazy">
+          <img src="/img/games/luke-2.webp" alt="A guard carrying a knocked-out Luke toward the window" width="1200" height="552" loading="lazy">
+          <img src="/img/games/luke-3.webp" alt="Luke drifting down past the tower on a striped parachute" width="1200" height="552" loading="lazy">
+          <img src="/img/games/luke-4.webp" alt="The village piazza with market stalls and bunting" width="1200" height="552" loading="lazy">
+          <img src="/img/games/luke-5.webp" alt="Luke facing the Gravedigger among the headstones on floor 88" width="1200" height="552" loading="lazy">
+          <img src="/img/games/luke-6.webp" alt="Emily asking Luke if he's hurt, under the tower at night" width="1200" height="552" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article id="gutspin" class="wrapper" style="--c:#8E2333;--on:#FFF6EE">
+      <div class="wrapper-in wrap">
+        <div class="label">
+          <img class="icon" src="/img/games/gut-icon.webp" alt="" width="72" height="72" loading="lazy">
+          <p class="sticker sticker-test">In testing</p>
+          <h2>Gutspin</h2>
+          <p class="pitch">Con the casino boss. Every boss in the House runs his own game of chance and has one weakness. Read his tells, feed his sweet tooth, and fix the reels while he isn't looking.</p>
+          <ul class="facts">
+            <li><b>24</b> bosses, one per room</li>
+            <li><b>1</b> hidden hack each</li>
+            <li><b>18+</b> play money only, no real prizes</li>
+          </ul>
+        </div>
+        <div class="reel reel-tall" tabindex="0" role="group" aria-label="Gutspin screenshots">
+          <img src="/img/games/gut-1.webp" alt="Ambrose, a grinning casino boss in a tuxedo, buried in jackpot coins" width="600" height="1208" loading="lazy">
+          <img src="/img/games/gut-2.webp" alt="Ambrose crouching by the slot machine, ready to pull the lever" width="600" height="1208" loading="lazy">
+          <img src="/img/games/gut-3.webp" alt="The House: a mansion cut open, with a numbered circle on every room" width="600" height="914" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article id="stomp-street" class="wrapper" style="--c:#DC6A3C;--on:#3A1D14">
+      <div class="wrapper-in wrap">
+        <div class="label">
+          <p class="sticker sticker-oven">In the oven</p>
+          <h2>Stomp Street</h2>
+          <p class="pitch">Strangers walk down the street, all out of step. Tap their shoes into time, drum on their backsides and kick out the troublemakers until the whole street plays the Radetzky March.</p>
+          <ul class="facts">
+            <li><b>6</b> famous tunes planned</li>
+            <li><b>1</b> very loud grandma</li>
+          </ul>
+        </div>
+        <div class="reel reel-tall" tabindex="0" role="group" aria-label="Stomp Street screenshots">
+          <img src="/img/games/stomp-1.webp" alt="Four walkers marching in step past a shop front, with the banner 'The whole street!'" width="600" height="1132" loading="lazy">
+          <img src="/img/games/stomp-2.webp" alt="A grandma, a jogger, a big man in a red jacket and a businessman walking out of step" width="600" height="1132" loading="lazy">
+        </div>
+      </div>
+    </article>
+
+    <article id="fear-frame" class="wrapper" style="--c:#4F9A87;--on:#3A1D14">
+      <div class="wrapper-in wrap">
+        <div class="label">
+          <p class="sticker sticker-oven">In the oven</p>
+          <h2>Fear Frame</h2>
+          <p class="pitch">A perfect 1950s beach postcard. You get ten seconds to plant a shark, a seagull and a hot dog cart. Then the picture comes alive and you watch the perfect moment fall apart.</p>
+          <ul class="facts">
+            <li><b>10</b> seconds to plan</li>
+            <li><b>3</b> objects to plant</li>
+            <li><b>0</b> sunburns spared</li>
+          </ul>
+        </div>
+        <div class="reel reel-tall" tabindex="0" role="group" aria-label="Fear Frame screenshots">
+          <img src="/img/games/fear-2.webp" alt="Chaos on the beach: a shark leaps, a hot dog cart explodes, a family runs" width="600" height="773" loading="lazy">
+          <img src="/img/games/fear-1.webp" alt="The calm beach postcard before anything happens" width="600" height="773" loading="lazy">
+          <img src="/img/games/fear-3.webp" alt="The score card: 98% devastation, three stars" width="600" height="1194" loading="lazy">
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="news" class="news wrap" aria-labelledby="news-h">
+    <h2 id="news-h" class="sec">Fresh out of the oven</h2>
+    <div class="news-body">
+    <ol class="timeline">
+      <li>
+        <time datetime="2026-11-14">Nov 14</time>
+        <h3>We deleted every tunnel in Scrub Rush</h3>
+        <p>All 17 of them. They were a haven for bugs and didn't add much. The stunts that lived inside them moved to ramps and crowds instead. It's coming in the next update.</p>
+      </li>
+      <li>
+        <time datetime="2026-11-12">Nov 12</time>
+        <h3>Run Luke, Run! has all 100 floors</h3>
+        <p>The tower is finished, from the lobby to the Penthouse, plus floor 100 and the ending. Nine zones, eighteen bosses, and a Lapdog whose yapping wakes up the whole floor.</p>
+      </li>
+      <li>
+        <time datetime="2026-11-11">Nov 11</time>
+        <h3>Scrub Rush multiplayer is in testing</h3>
+        <p>One button, Game Center's own invite screen, and up to four of you racing on five places. No menus in between.</p>
+      </li>
+      <li>
+        <time datetime="2026-11-09">Nov 9</time>
+        <h3>Scrub Rush is out</h3>
+        <p>Our first game is on the App Store, free. Go clean an airport.</p>
+      </li>
+      <li>
+        <time datetime="2026-11-01">Nov 1</time>
+        <h3>Gutspin opened its doors to testers</h3>
+        <p>The first four rooms of the House are playable, including the riverboat captain, the Doorman and Ambrose's lounge.</p>
+      </li>
+      <li>
+        <time datetime="2026-10-29">Oct 29</time>
+        <h3>Five games went into the oven</h3>
+        <p>BonBon Studios started with five pitches on one page. All five are still cooking.</p>
+      </li>
+    </ol>
+    </div>
+  </section>
+
+  <section id="how" class="how wrap" aria-labelledby="how-h">
+    <h2 id="how-h" class="sec">How we work</h2>
+    <div class="rules">
+      <div class="rule">
+        <h3>One joke per game</h3>
+        <p>Every game starts as one silly sentence. A floor scrubber doing backflips. A guard who throws you out the window. If it doesn't fit in a sentence, it isn't ready.</p>
+      </div>
+      <div class="rule">
+        <h3>One seagull beats two</h3>
+        <p>Every picture uses the fewest things that tell the joke. Empty space is part of the gag.</p>
+      </div>
+      <div class="rule">
+        <h3>Played on a real phone</h3>
+        <p>Every build goes onto a real iPhone before it goes anywhere near you. If it feels wrong under a thumb, it gets fixed.</p>
+      </div>
+      <div class="rule">
+        <h3>If it's annoying, it goes</h3>
+        <p>We'd rather delete a feature than patch it forever. Ask the tunnels.</p>
+      </div>
+      <div class="rule">
+        <h3>Music from the old masters</h3>
+        <p>Our soundtracks are public-domain classics we arrange ourselves: Offenbach's Galop Infernal, the Radetzky March, In the Hall of the Mountain King.</p>
+      </div>
+      <div class="rule">
+        <h3>Free, no account</h3>
+        <p>Every game is free to download and you never sign up. We don't ask for your name, email or phone number. <a href="/privacy/">Our privacy policy</a> says exactly what we collect.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hello wrap" aria-labelledby="hello-h">
+    <h2 id="hello-h">Say hello</h2>
+    <p>Found a bug, want to write about a game, or just want to tell us a seagull is too loud? We read everything.</p>
+    <a class="btn btn-red" href="mailto:hello@playbonbon.com">hello@playbonbon.com</a>
+  </section>
+</main>
+
+<footer class="site">
   <div class="wrap">
-    <header class="site">
-      <a class="logo" href="/"><span class="dots"><i></i><i></i><i></i></span>BonBon Studios</a>
-      <nav class="site">
-        <a href="/support/">Support</a>
-        <a href="/privacy/">Privacy</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <h1>Small games.<br><span class="candy">Big sugar rush.</span></h1>
-      <p>We make quick, silly mobile games you can play with one thumb while the kettle boils.</p>
-    </section>
-
-    <div class="wrappers" aria-hidden="true">
-      <div class="wrapper"></div>
-      <div class="wrapper"></div>
-      <div class="wrapper"></div>
-    </div>
-
-    <div class="card">
-      <h2>Our first games are on the way</h2>
-      <p>They're coming to the App Store and Google Play soon. Every one of them is free to play.</p>
-    </div>
-    <div class="card">
-      <h2>Need help with a game?</h2>
-      <p>Write to <a href="mailto:hello@playbonbon.com">hello@playbonbon.com</a> or see the <a href="/support/">support page</a>.</p>
-    </div>
-
-    <footer class="site">
-      <div class="links"><a href="/support/">Support</a><a href="/privacy/">Privacy policy</a></div>
-      <div>© 2026 BonBon Games LLC. BonBon Studios is a trade name of BonBon Games LLC.</div>
-    </footer>
+    <div class="links"><a href="/support/">Support</a><a href="/privacy/">Privacy policy</a><a href="mailto:hello@playbonbon.com">hello@playbonbon.com</a></div>
+    <div>© 2026 BonBon Games LLC. BonBon Studios is a trade name of BonBon Games LLC.</div>
   </div>
+</footer>
+
+<script src="/site.js" defer></script>
 </body>
 </html>
